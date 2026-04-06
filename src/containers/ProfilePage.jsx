@@ -1,5 +1,7 @@
 import CardShell from "../components/CardShell";
 import FloatingAI from "../components/FloatingAI";
+import PricingAgentButton from "../components/PricingAgentButton";
+
 
 function ProfilePage() {
     return (
@@ -9,8 +11,7 @@ function ProfilePage() {
                 <CardShell title="RFM" />
                 <CardShell title="Forcasting" />
             </div>
-
-            <FloatingAI />
+            <PricingAgentButton /> 
         </div>
     );
 }
