@@ -8,14 +8,32 @@ function formatPercent(value) {
     return `${(value * 100).toFixed(1)}%`;
 }
 
+// 📦 Define your placeholder data (adjust numbers as needed)
+const PLACEHOLDER_ROWS = [
+    { segment: "Grow", revenue: 0, variable_margin: 0, opportunity: 0, vm_pct: 0 },
+    { segment: "Grow", revenue: 0, variable_margin: 0, opportunity: 0, vm_pct: 0},
+    { segment: "Defend", revenue: 0, variable_margin: 0, opportunity: 0, vm_pct: 0},
+    { segment: "Defend", revenue: 0, variable_margin: 0, opportunity: 0, vm_pct: 0},
+    { segment: "Review/Fix", revenue: 0, variable_margin: 0, opportunity: 0, vm_pct: 0},
+    { segment: "Review/Fix", revenue: 0, variable_margin: 0, opportunity: 0, vm_pct: 0},
+    { segment: "Optimize", revenue: 0, variable_margin: 0, opportunity: 0, vm_pct: 0},
+    { segment: "Optimize", revenue: 0, variable_margin: 0, opportunity: 0, vm_pct: 0},
+];
+
 export default function SegmentPanel() {
     const [rows, setRows] = useState([]);
 
     useEffect(() => {
         fetch("http://localhost:5000/api/profitmatrix-data")
-            .then((res) => res.json())
+            .then((res) => {
+                if (!res.ok) throw new Error(`HTTP error ${res.status}`);
+                return res.json();
+            })
             .then((data) => setRows(data))
-            .catch((err) => console.error("Failed to load data:", err));
+            .catch((err) => {
+                console.error("Failed to load data, using placeholder:", err);
+                setRows(PLACEHOLDER_ROWS);   // ✅ fallback to dummy data
+            });
     }, []);
 
     const summary = useMemo(() => {

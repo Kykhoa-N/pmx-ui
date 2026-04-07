@@ -49,9 +49,7 @@ export const PricingAgentChat = ({ onClose }) => {
         <Box sx={{ 
             p: 2, 
             bgcolor: theme.palette.primary.main, 
-            // commenting this out for now until I can fix theme.js
-            // color: theme.palette.chatbot.title, 
-            color: '#1976d2', 
+            color: theme.palette.chatbot.title, 
             display: 'flex', 
             alignItems: 'center' 
         }}>

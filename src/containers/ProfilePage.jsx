@@ -1,5 +1,6 @@
 import CardShell from "../components/CardShell";
 import FloatingAI from "../components/FloatingAI";
+import PricingAgentButton from "../components/PricingAgentButton";
 import SegmentPanel from "../components/SegmentPanel";
 
 
@@ -11,10 +12,9 @@ function ProfilePage() {
                     <SegmentPanel />
                 </CardShell>
                 <CardShell title="RFM" />
-                <CardShell title="Forcasting" />
+                <CardShell title="Forecasting" />
             </div>
-
-            <FloatingAI />
+            <PricingAgentButton /> 
         </div>
     );
 }
