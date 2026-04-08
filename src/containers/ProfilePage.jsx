@@ -4,6 +4,8 @@ import PricingAgentButton from "../components/PricingAgentButton";
 import SegmentPanel from "../components/SegmentPanel";
 
 
+// This is deprecated, keeping around for reference. 
+
 function ProfilePage() {
     return (
         <div className="page">

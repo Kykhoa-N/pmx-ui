@@ -1,14 +1,19 @@
-import ProfilePage from "./containers/ProfilePage";
 import { ThemeProvider } from "@mui/material";
+import { BrowserRouter } from "react-router-dom";
 import { appTheme } from "./theme";
-import PricingAgentChat from "./components/PricingAgentChat";
-
+import { AppHeader } from "./components/AppHeader.jsx";
+import Dashboard from "./containers/Dashboard";
+import { AppFooter } from "./components/AppFooter.jsx";
 
 function App() {
   return (
-    <ThemeProvider theme={appTheme}>
-    <ProfilePage />;
-    </ThemeProvider>
+    <BrowserRouter>
+      <ThemeProvider theme={appTheme}>
+        <AppHeader />
+        <Dashboard />
+        <AppFooter />
+      </ThemeProvider>
+    </BrowserRouter>
   );
 }
 
