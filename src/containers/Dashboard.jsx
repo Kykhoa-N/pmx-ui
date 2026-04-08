@@ -5,30 +5,38 @@ import SegmentPanel from "../components/SegmentPanel";
 
 export const Dashboard = () => {
     return (
-        <div style={{ marginTop: 30, marginBottom: 100 }}>
+        <div style={{ maxWidth: 1400, margin: '0 auto', width: '100%' }}>
             <Grid container spacing={2}>
                 {/* Clustering Card */}
                 <Grid size={4} justifyItems="center">
                     <div style={{ 
-                        padding: 20, 
-                        border: '1px solid #ccc', 
-                        borderRadius: 8,
-                        textAlign: 'center',
-                        backgroundColor: '#f9f9f9'
-                    }}>
-                        <h3>Clustering</h3>
-                        <SegmentPanel /> 
-                    </div>
+                            padding: 30, 
+                            minHeight: 350,
+                            border: '1px solid #ccc', 
+                            borderRadius: 8,
+                            textAlign: 'center',
+                            backgroundColor: '#f9f9f9',
+                            display: 'flex',
+                            flexDirection: 'column',
+                            justifyContent: 'space-between'
+                        }}>
+                      <h3>Clustering</h3>
+                      <SegmentPanel /> 
+                  </div>
                 </Grid>
 
                 {/* RFM Card */}
                 <Grid size={4} justifyItems="center">
                     <div style={{ 
-                        padding: 20, 
+                        padding: 30, 
+                        minHeight: 350,
                         border: '1px solid #ccc', 
                         borderRadius: 8,
                         textAlign: 'center',
-                        backgroundColor: '#f9f9f9'
+                        backgroundColor: '#f9f9f9',
+                        display: 'flex',
+                        flexDirection: 'column',
+                        justifyContent: 'space-between'
                     }}>
                         <h3>RFM</h3>
                         <p>Recency, Frequency, Monetary analysis</p>
@@ -38,11 +46,15 @@ export const Dashboard = () => {
                 {/* Forecasting Card */}
                 <Grid size={4} justifyItems="center">
                     <div style={{ 
-                        padding: 20, 
+                        padding: 30, 
+                        minHeight: 350,
                         border: '1px solid #ccc', 
                         borderRadius: 8,
                         textAlign: 'center',
-                        backgroundColor: '#f9f9f9'
+                        backgroundColor: '#f9f9f9',
+                        display: 'flex',
+                        flexDirection: 'column',
+                        justifyContent: 'space-between'
                     }}>
                         <h3>Forecasting</h3>
                         <p>Sales / demand predictions</p>
